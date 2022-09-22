@@ -8,6 +8,8 @@ function Hello() {
 
 // JSX: JS확장 문법으로 HTML 작성 가능
 // babel에 의해서 JS로 변환
+// https://ko.reactjs.org/docs/introducing-jsx.html
+// https://react.vlpt.us/basic/04-jsx.html
 // 규칙
 // - 감싸인 element
 // - closing element
@@ -17,13 +19,24 @@ function Hello() {
 // - undefined 렌더링하지 않기
 // - class대신 className 사용
 // - 주석
-export default function Section4() {
+
+// function test() 
+function Test() {
+    // return undefined || '값이 undefined입니다.';
+    // return undefined;
+    const a = undefined;
+    return a;
+}
+function Section4() {
     const titleText = 'Title';
     const isShow = true;
     return (
         <>
+            <Test />
             <Hello />
             {titleText}: { isShow && <span>Hello World!</span>}
         </>
     )
 }
+
+export default  Section4;

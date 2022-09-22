@@ -17,14 +17,14 @@ export default function InputSample() {
       ...inputs, // 기존 input 객체를 본사한 뒤
       [name]: value // name key 를 가진 값을 value로 설정
     });
-  };
-  const onReset = () => {
-    // inputs[name] = navlue;
+    // inputs[name] = value;
     // 위와 같이 수정하면 안되고, 새로운 객체를 만들어서 변화를 주고 이를 state로 사용
     // 상태가 업데이트 됐음을 리액트 컴포넌트에서 인지하고, 필요한 렌더링을 진행
     // 만약 inputs 참조 메모리주소가 변경되지 않으면(기존 상태를 직접 수정)
     // 값을 바꿔도 리렌더링 되지 않습니다.
     // 불변성을 지켜야지만 컴포넌트 업데이트 성능 최적화를 제대로 수행할 수 있다.
+  };
+  const onReset = () => {
     setInputs({
       name: "",
       nickname: ""

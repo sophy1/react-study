@@ -1,6 +1,7 @@
 import Hello from "./Hello";
 import Wrapper from "./Wrapper";
 
+// https://ko.reactjs.org/docs/components-and-props.html
 export default function Section5() {
   return (
     <div className="section5">
