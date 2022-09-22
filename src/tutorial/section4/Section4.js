@@ -17,13 +17,24 @@ function Hello() {
 // - undefined 렌더링하지 않기
 // - class대신 className 사용
 // - 주석
-export default function Section4() {
+
+// function test() 
+function Test() {
+    // return undefined || '값이 undefined입니다.';
+    // return undefined;
+    const a = undefined;
+    return a;
+}
+function Section4() {
     const titleText = 'Title';
     const isShow = true;
     return (
         <>
+            <Test />
             <Hello />
             {titleText}: { isShow && <span>Hello World!</span>}
         </>
     )
 }
+
+export default  Section4;
