@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// useState Hook을 사용하여 사용자 인터랙션으로 변경되는 값을 상태로 관리하기
 export default function Counter() {
   // useState는 state의 default value를 파라미터로 넣어서 호출
   // 호출하면 배열이 반환되는데,

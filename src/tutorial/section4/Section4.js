@@ -8,6 +8,8 @@ function Hello() {
 
 // JSX: JS확장 문법으로 HTML 작성 가능
 // babel에 의해서 JS로 변환
+// https://ko.reactjs.org/docs/introducing-jsx.html
+// https://react.vlpt.us/basic/04-jsx.html
 // 규칙
 // - 감싸인 element
 // - closing element
