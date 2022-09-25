@@ -10,6 +10,7 @@ function Hello() {
 // babel에 의해서 JS로 변환
 // https://ko.reactjs.org/docs/introducing-jsx.html
 // https://react.vlpt.us/basic/04-jsx.html
+// https://ko.reactjs.org/docs/jsx-in-depth.html
 // 규칙
 // - 감싸인 element
 // - closing element
