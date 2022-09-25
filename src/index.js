@@ -12,6 +12,7 @@ const root = createRoot(rootElement);
 // - 두 번째 파라미터는 해당 JSX를 렌더링할 document의 내부 element를 설정
 // React.StrictMode
 // - 리액트의 레거시 기능(문자열 ref, componentWillMount)등 사용했을때 경고 출력
+// https://ko.reactjs.org/docs/strict-mode.html
 root.render(
   <StrictMode>
     <App />
