@@ -11,13 +11,28 @@ export default function Section12() {
   // 추가할때, 새 항목에서 사용할 고유 id를 관리하는 용도
   // userRef의 파라미터 값은 이 값이 .current 값의 기본 값이며 수정, 조회 가능
   const nextId = useRef(4);
+  const [users, setUsers] = useState(mockUsers);
+
   const onCreate = () => {
+    // section13
+    // useState for users
+    const newUser = {
+        id: nextId.current,
+        username,
+        email
+    };
+    //setUsers(users.concat(newUser));
+    setUsers([...users, newUser]);
+    console.log(users);
+    // 아래는 기존 코드
     setInputs({
       username: "",
       email: ""
     });
     nextId.current += 1;
   };
+  
+  
   // section13
   // useState -> inputs -> onChange
   const [inputs, setInputs] = useState({
@@ -49,6 +64,7 @@ export default function Section12() {
         onChange={onChange}
         onCreate={onCreate}
       />
+      <UserList users={users} />
       <h5>Ch1-section14: 배열에 항목 제거하기 </h5>
       <UserList users={mockUsers} onRemove={onRemove} />
     </div>

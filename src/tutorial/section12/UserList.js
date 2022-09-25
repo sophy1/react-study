@@ -9,14 +9,17 @@ function User({ user }) {
   );
 }
 
-export default function UserList({ users }) {
+export default function UserList({ users, onRemove }) {
   return (
     <div>
       {/* {users.map((user) => {
         <User user={user} key={user.id} />
       })} */}
       {users.map((user) => (
-        <User user={user} key={user.id} />
+        <>
+<User user={user} key={user.id} />
+            <button onRemove={onRemove}>삭제</button>
+        </>
       ))}
     </div>
   );
