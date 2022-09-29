@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from 'react-router-dom'; // * BrowserRouter 불러오기
 
 import App from "./App";
 
@@ -15,7 +16,9 @@ const root = createRoot(rootElement);
 // https://ko.reactjs.org/docs/strict-mode.html
 root.render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>
 );
 

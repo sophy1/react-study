@@ -1,19 +1,26 @@
 import "./styles.css";
 
-import Section4 from "./tutorial/section4/Section4";
-import Section5 from "./tutorial/section5/Section5";
-import Section7 from "./tutorial/section7/Section7";
-import Section8 from "./tutorial/section8/Section8";
-import Section12 from "./tutorial/section12/Section12";
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from "./tutorial/Home";
+import StateAndLifecycle from "./tutorial/state-and-lifecycle/StateAndLifecycle";
 
 export default function App() {
   return (
     <div className="App">
-      <Section4 />
-      <Section5 />
-      <Section7 />
-      <Section8 />
-      <Section12 />
+      <ul>
+        <li>
+          <Link to="/">홈</Link>
+        </li>
+        <li>
+          <Link to="/state-and-lifecycle">State and Lifecycle</Link>
+        </li>
+      </ul>
+      <hr />
+      <Routes>
+        <Route path="/" exact={true} element={<Home />} />
+        <Route path="/state-and-lifecycle" element={<StateAndLifecycle />} />
+      </Routes>
     </div>
   );
 }
