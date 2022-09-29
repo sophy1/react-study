@@ -66,7 +66,7 @@ export default function Section12() {
       />
       <UserList users={users} />
       <h5>Ch1-section14: 배열에 항목 제거하기 </h5>
-      <UserList users={mockUsers} onRemove={onRemove} />
+      <UserList users={mockUsers}  />
     </div>
   );
 }
